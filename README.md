@@ -9,3 +9,9 @@ data observer.
 ### houses
 - `requirements.txt`
 - command: `pip install -r requirements.txt`
+
+## run locally
+- `python manage.py runserver`
+
+## requirements
+- superuser: `python manage.py createsuperuser`
