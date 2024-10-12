@@ -1,0 +1,21 @@
+<div class="grid">
+    <!-- steps - sidebar -->
+    <div class="col-12 sm:col-2">
+        <app-auth-options
+            (onOptionActivated)="breadcrumbTo($event)"/>
+    </div>
+
+    <!--  -->
+    <div class="col">
+        <!-- breadcrumb -->
+        <div>
+            <app-breadcrumb-nav 
+                [home]="homeLocation"
+                [currentLocation]="currentLocation" />
+        </div>
+        <!-- pages -->
+         <div>
+            <router-outlet></router-outlet>
+         </div>
+    </div>
+ </div>

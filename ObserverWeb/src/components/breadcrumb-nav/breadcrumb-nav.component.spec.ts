@@ -23,21 +23,33 @@ describe('BreadcrumbNavComponent', () => {
     fixture = TestBed.createComponent(BreadcrumbNavComponent);
   });
 
-  it('should create', () => {
+  it('should configure routing with single value currentLocation', () => {
+    fixture.componentInstance.currentLocation = ['auth'];
+
     fixture.detectChanges();
 
-    expect(fixture.componentInstance).toBeTruthy();
+    fixture.componentInstance.setItemsByCurrentLocation();
+
+    expect(fixture.componentInstance.items).toEqual([{
+      label: 'auth',
+      routerLink: 'auth'
+    }]);
   });
 
-  it('should initiate Home route', ()=>{
+  
+  it('should configure routing with multiple value currentLocation', () => {
+    fixture.componentInstance.currentLocation = ['auth', 'login'];
+
     fixture.detectChanges();
 
-    expect(fixture.componentInstance.home).toBeTruthy();
-  });
+    fixture.componentInstance.setItemsByCurrentLocation();
 
-  it(`should initialize home route with default route '/home' `,()=>{
-    fixture.detectChanges();
-
-    expect(fixture.componentInstance.home.routerLink).toEqual('/home');
+    expect(fixture.componentInstance.items).toEqual([{
+      label: 'auth',
+      routerLink: 'auth'
+    }, {
+      label: 'login',
+      routerLink: 'auth/login'
+    }]);
   });
 });
