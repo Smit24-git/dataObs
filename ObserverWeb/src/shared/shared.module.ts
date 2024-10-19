@@ -1,23 +1,30 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PanelMenuModule } from 'primeng/panelmenu';
 import { BreadcrumbModule } from 'primeng/breadcrumb';
-import { ActivatedRoute } from '@angular/router';
-
-
+import { InputTextModule } from 'primeng/inputtext'
+import { PasswordModule } from 'primeng/password';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ButtonModule } from 'primeng/button';
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
     PanelMenuModule,
-    BreadcrumbModule
+    BreadcrumbModule,
+    InputTextModule,
+    PasswordModule,
+    ReactiveFormsModule,
+    ButtonModule,
   ],
   exports: [
     PanelMenuModule,
-    BreadcrumbModule
+    BreadcrumbModule,
+    InputTextModule,
+    PasswordModule,
+    ReactiveFormsModule,
+    ButtonModule,
   ],
   providers: [
   ],

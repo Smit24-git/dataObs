@@ -1,1 +1,33 @@
-<p>register works!</p>
+<h1>Register</h1>
+
+<form [formGroup]="registerForm" (submit)="registerUser()">
+    <div class="grid mt-2">
+        <div class="col-12">
+            <label class="inline-block w-6rem">Name: </label>
+            <input class="w-20rem" type="text" pInputText formControlName="name" />
+        </div>
+        <div class="col-12">
+            <label class="inline-block w-6rem">Email: </label>
+            <input class="w-20rem" type="text" pInputText formControlName="email" />
+        </div>
+        <div class="col-12">
+            <label class="inline-block w-6rem" for="password">Password: </label>
+            <p-password styleClass="w-20rem" inputId="password"  class="w-20rem" formControlName="password" inputStyleClass="w-20rem" />
+        </div>
+        <div class="col-12">
+            <label class="inline-block w-6rem" for="passwordRetype">Retype: </label>
+            <p-password styleClass="w-20rem" inputId="passwordRetype"  class="w-20rem" formControlName="passwordRetype" inputStyleClass="w-20rem" />
+        </div>
+        <div class="col-12">
+            <label class="inline-block w-6rem"></label>
+            <p-button
+                id="submit"
+                type="submit"
+                label="Register"
+                styleClass="w-20rem"
+                severity="info"
+                [raised]="true"
+                [outlined]="true" />
+        </div>
+    </div>
+</form>

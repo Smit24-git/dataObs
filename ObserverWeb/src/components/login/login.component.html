@@ -1,1 +1,24 @@
-<p>login works!</p>
+<h1>Login</h1>
+
+<form [formGroup]="loginForm" (submit)="authenticateUser()">
+    <div class="grid mt-2">
+        <div class="col-12">
+            <label class="inline-block w-6rem">Email: </label>
+            <input class="w-20rem" type="text" pInputText formControlName="email" />
+        </div>
+        <div class="col-12">
+            <label class="inline-block w-6rem" for="password">Password: </label>
+            <p-password styleClass="w-20rem" inputId="password"  class="w-20rem" formControlName="password" inputStyleClass="w-20rem" />
+        </div>
+        <div class="col-12">
+            <label class="inline-block w-6rem"></label>
+            <p-button
+                id="submit"
+                type="submit"
+                label="Submit"
+                styleClass="w-20rem"
+                [raised]="true"
+                [outlined]="true"/>
+        </div>
+    </div>
+</form>
