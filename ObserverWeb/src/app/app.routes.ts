@@ -3,6 +3,7 @@ import { DataProcessHomeComponent } from '../components/data-process-home/data-p
 import { AuthHomeComponent } from '../components/auth-home/auth-home.component';
 import { LoginComponent } from '../components/login/login.component';
 import { RegisterComponent } from '../components/register/register.component';
+import { HomeComponent } from '../components/home/home.component';
 
 export const routes: Routes = [
     {
@@ -12,7 +13,7 @@ export const routes: Routes = [
     },
     {
         path: 'home',
-        component: DataProcessHomeComponent
+        component: HomeComponent
     },
     {
         path: 'auth',

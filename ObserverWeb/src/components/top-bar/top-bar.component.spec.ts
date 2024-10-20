@@ -14,7 +14,6 @@ describe('TopBarComponent', () => {
   });
 
   it("should have title Data Observer",()=>{
-    
     expect(fixture.componentInstance.title).toBe("Data Observer");
   });
 });

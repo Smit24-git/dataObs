@@ -1,3 +1,10 @@
-<div>
+<div class="flex align-content-center align-items-center">
     <h2>{{title}}</h2>
+    <div *ngIf="login" class="ml-auto">
+        <p-button
+            label="Logout"
+            [outlined]="true"
+            styleClass="w-10rem"
+            (onClick)="logout()"/>
+    </div>
 </div>

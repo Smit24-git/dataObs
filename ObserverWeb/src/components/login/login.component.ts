@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { SharedModule } from '../../shared/shared.module';
 import { AuthService } from '../../shared/services/Authentication/auth.service';
 import { LocalStorageService } from '../../shared/services/LocalStorage/local-storage.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -19,6 +20,7 @@ export class LoginComponent implements OnInit {
 
   private authService = inject(AuthService);
   private localStorageService = inject(LocalStorageService);
+  private router = inject(Router);
 
   loginForm!: FormGroup;
 
@@ -43,8 +45,8 @@ export class LoginComponent implements OnInit {
       username: formData.email,
       password: formData.password
     }).subscribe((res)=>{
-      console.log(res);
       this.localStorageService.saveToken(res.token);
+      this.router.navigate(['home']);
     });
 
   }
