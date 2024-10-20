@@ -2,13 +2,20 @@ import { ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testin
 
 import { LoginComponent } from './login.component';
 import { By } from '@angular/platform-browser';
+import { AuthService } from '../../shared/services/Authentication/auth.service';
 
 describe('LoginComponent', () => {
   let fixture: ComponentFixture<LoginComponent>;
-  
+  let mockAuthService, mockLocalStorageService;
   beforeEach(()=>{
+    mockAuthService = jasmine.createSpyObj(['authenticate']);
+    mockLocalStorageService = jasmine.createSpyObj(['saveToken']);
+
     TestBed.configureTestingModule({
-      imports: [LoginComponent]
+      imports: [LoginComponent],
+      providers:[
+        { provide: AuthService, useValue: mockAuthService }
+      ]
     });
 
     fixture = TestBed.createComponent(LoginComponent);
