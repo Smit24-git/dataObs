@@ -6,6 +6,9 @@ import { InputTextModule } from 'primeng/inputtext'
 import { PasswordModule } from 'primeng/password';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
+import { PanelModule } from 'primeng/panel';
+import { CardModule } from 'primeng/card';
+
 
 @NgModule({
   declarations: [],
@@ -17,6 +20,8 @@ import { ButtonModule } from 'primeng/button';
     PasswordModule,
     ReactiveFormsModule,
     ButtonModule,
+    PanelModule,
+    CardModule,
   ],
   exports: [
     PanelMenuModule,
@@ -25,6 +30,8 @@ import { ButtonModule } from 'primeng/button';
     PasswordModule,
     ReactiveFormsModule,
     ButtonModule,
+    PanelModule,
+    CardModule,
   ],
   providers: [
   ],

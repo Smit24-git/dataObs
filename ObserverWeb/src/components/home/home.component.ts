@@ -4,11 +4,12 @@ import { Router } from '@angular/router';
 import { DataProcessStepsComponent } from "../data-process-steps/data-process-steps.component";
 import { BreadcrumbNavComponent } from "../breadcrumb-nav/breadcrumb-nav.component";
 import { MenuItem } from 'primeng/api';
+import { ImportPanelComponent } from "../import-panel/import-panel.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [DataProcessStepsComponent, BreadcrumbNavComponent],
+  imports: [DataProcessStepsComponent, BreadcrumbNavComponent, ImportPanelComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

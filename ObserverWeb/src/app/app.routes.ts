@@ -4,6 +4,7 @@ import { AuthHomeComponent } from '../components/auth-home/auth-home.component';
 import { LoginComponent } from '../components/login/login.component';
 import { RegisterComponent } from '../components/register/register.component';
 import { HomeComponent } from '../components/home/home.component';
+import { TextImportComponent } from '../components/text-import/text-import.component';
 
 export const routes: Routes = [
     {
@@ -29,5 +30,15 @@ export const routes: Routes = [
             }
         ]
     },
+    {
+        path: 'import',
+        // component: TODO: Add new component,
+        children: [
+            {
+                path: 'text',
+                component: TextImportComponent
+            }
+        ]
+    }
     
 ];
